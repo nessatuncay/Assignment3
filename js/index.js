@@ -7,6 +7,8 @@ const searchInput = document.getElementById("search-input");
 const resultsDiv = document.getElementById("results-grid");
 const statusMessage = document.getElementById("status-message");
 
+//get the codes here: https://developer.themoviedb.org/reference/account-rated-movies
+
 function loadTrendingMovies()
 {
     const url = baseUrl + "/trending/movie/week?api_key=" + apiKey;
@@ -39,6 +41,30 @@ function showMovies(movies)
         statusMessage.textContent = "no movies found";
         return statusMessage;
     }
+
+    statusMessage.textContent = "";
+
+    let movieCards = "";
+
+
+    for (let i = 0; i < movies.length; i++)
+    {
+        const movie = movies[i];
+
+        let year = "";
+        if (movie.release_date)
+        {
+            year = movie.release_date;
+        }
+
+        movieCards += `<div class="movie-card">
+                       <h3>${movie.title}</h3>
+                       <p>${year} | Ratings: ${movie.vote_average.toFixed(1)}/10</p>`;
+    }
 }
+
+
+
+
 
 loadTrendingMovies();
