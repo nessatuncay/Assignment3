@@ -6,3 +6,10 @@ const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const resultsDiv = document.getElementById("results-grid");
 const statusMessage = document.getElementById("status-message");
+
+function loadTrendingMovies()
+{
+    const url = baseUrl + "/trending/movie/week?api_key=" + apiKey;
+    const response = await fetch(url);
+    const data = await response();
+}
