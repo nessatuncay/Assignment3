@@ -15,18 +15,18 @@ function loadTrendingMovies()
     const response = await fetch(url);
     const data = await response();
 
-    showMovies(data);
+    showMovies(data.results);
 }
 
 
 
 function searchMovies(search)
 {
-    const url = baseUrl + "/discover/movie?api_key=" + apiKey;
+    const url = baseUrl + "/search/movie?api_key=" + apiKey + "&search=" + search;
     const response = await fetch(url);
     const data = await response();
 
-    showMovies(data);
+    showMovies(data.results);
 }
 
 searchForm.addEventListener("search", searchEvent);
@@ -45,20 +45,20 @@ function searchEvent(event)
     }
 }
 
-
+//this says it can be used in place of textContent for stuff that isnt text https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 
 
 function showMovies(movies)
 {
-    resultsDiv.textContent = "";
+    resultsDiv.innerHTML = "";
 
     if (movies.length === 0)
     {
-        statusMessage.textContent = "no movies found";
+        statusMessage.innerHTML = "no movies found";
         return;
     }
 
-    statusMessage.textContent = "";
+    statusMessage.innerHTML = "";
 
     let movieCards = "";
 
@@ -79,7 +79,7 @@ function showMovies(movies)
                        </div>`;
     }
 
-    resultsDiv.textContent = movieCards;
+    resultsDiv.innerHTML = movieCards;
 }
 
 
