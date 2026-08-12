@@ -9,27 +9,27 @@ const statusMessage = document.getElementById("status-message");
 
 //get the codes here: https://developer.themoviedb.org/reference/account-rated-movies
 
-function loadTrendingMovies()
+async function loadTrendingMovies()
 {
     const url = baseUrl + "/trending/movie/week?api_key=" + apiKey;
     const response = await fetch(url);
-    const data = await response();
+    const data = await response.json();
 
     showMovies(data.results);
 }
 
 
 
-function searchMovies(search)
+async function searchMovies(search)
 {
-    const url = baseUrl + "/search/movie?api_key=" + apiKey + "&search=" + search;
+    const url = baseUrl + "/search/movie?api_key=" + apiKey + "&query=" + search;
     const response = await fetch(url);
-    const data = await response();
+    const data = await response.json();
 
     showMovies(data.results);
 }
 
-searchForm.addEventListener("search", searchEvent);
+searchForm.addEventListener("submit", searchEvent);
 
 function searchEvent(event)
 {
