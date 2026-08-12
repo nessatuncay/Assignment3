@@ -62,6 +62,8 @@ function showMovies(movies)
                        <p>${year} | Ratings: ${movie.vote_average.toFixed(1)}/10</p>
                        </div>`;
     }
+
+    resultsDiv.textContent = movieCards;
 }
 
 
