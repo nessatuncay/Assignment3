@@ -29,6 +29,22 @@ function searchMovies(search)
     showMovies(data);
 }
 
+searchForm.addEventListener("search", searchEvent);
+
+function searchEvent(event)
+{
+    const search = searchInput.value.trim();
+
+    if (search === "")
+    {
+        loadTrendingMovies();
+    }
+    else
+    {
+        searchMovies(search);
+    }
+}
+
 
 
 
