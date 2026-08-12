@@ -40,3 +40,5 @@ function showMovies(movies)
         return statusMessage;
     }
 }
+
+loadTrendingMovies();

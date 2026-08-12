@@ -1,0 +1,64 @@
+body 
+{
+    font-family: Blippo, fantasy;
+    background-color: #570606;
+    color: white;
+    margin: 0;
+}
+
+header 
+{
+    background: repeating-linear-gradient(90deg, #ffffff, #a09d9d 20px, #ef0505 20px, #720707 40px);
+    text-align: center;
+    padding: 20px 20px;
+}
+
+header h1 
+{
+    margin: 10;
+    color: #fad000;
+    text-shadow: -2px -2px black, 2px -2px black, -2px 1px black, 1px -1px black;
+}
+
+main 
+{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#search-form 
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#search-input 
+{
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+#search-form button 
+{
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #fad000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#search-form button:hover 
+{
+    background-color: #ffaa00;
+}
+
+main>p 
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
