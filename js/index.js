@@ -16,6 +16,20 @@ function loadTrendingMovies()
     showMovies(data);
 }
 
+
+
+function searchMovies(search)
+{
+    const url = baseUrl + "/discover/movie?api_key=" + apiKey;
+    const response = await fetch(url);
+    const data = await response();
+
+    showMovies(data);
+}
+
+
+
+
 function showMovies(movies)
 {
     resultsDiv.textContent = "";
