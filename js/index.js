@@ -1,0 +1,8 @@
+const apiKey = "36629f0d39e96287cdf12b7db8f64247";
+const baseUrl = "https://api.themoviedb.org/3";
+const imageUrl = "https://image.tmdb.org/t/p/w300";
+
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const resultsDiv = document.getElementById("results-grid");
+const statusMessage = document.getElementById("status-message");
