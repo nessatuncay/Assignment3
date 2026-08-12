@@ -39,7 +39,7 @@ function showMovies(movies)
     if (movies.length === 0)
     {
         statusMessage.textContent = "no movies found";
-        return statusMessage;
+        return;
     }
 
     statusMessage.textContent = "";
@@ -59,7 +59,8 @@ function showMovies(movies)
 
         movieCards += `<div class="movie-card">
                        <h3>${movie.title}</h3>
-                       <p>${year} | Ratings: ${movie.vote_average.toFixed(1)}/10</p>`;
+                       <p>${year} | Ratings: ${movie.vote_average.toFixed(1)}/10</p>
+                       </div>`;
     }
 }
 
