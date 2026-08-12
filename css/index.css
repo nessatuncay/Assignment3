@@ -62,3 +62,37 @@ main>p
     font-size: 14px;
 }
 
+#results 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.movie-card 
+{
+    background-color: #c70f1b;
+    width: 180px;
+    border: ridge;
+    border-width: 15px 18px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 10px 13px 10px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card h3 
+{
+    font-size: 20px;
+    margin: 10px 5px 5px;
+    text-shadow: -2px -2px black, 2px -2px black, -2px 1px black, 1px -1px black;
+}
+
+.movie-card p 
+{
+    font-size: 13px;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
