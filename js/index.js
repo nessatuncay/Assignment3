@@ -12,4 +12,17 @@ function loadTrendingMovies()
     const url = baseUrl + "/trending/movie/week?api_key=" + apiKey;
     const response = await fetch(url);
     const data = await response();
+
+    showMovies(data);
+}
+
+function showMovies(movies)
+{
+    resultsDiv.textContent = "";
+
+    if (movies.length === 0)
+    {
+        statusMessage.textContent = "no movies found";
+        return statusMessage;
+    }
 }
