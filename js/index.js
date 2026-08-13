@@ -67,6 +67,11 @@ function showMovies(movies)
     {
         const movie = movies[i];
 
+        if (movie.poster_path)
+        {
+            posterSrc = imageUrl + movie.poster_path;
+        }
+
         let year = "";
         if (movie.release_date)
         {
@@ -74,6 +79,7 @@ function showMovies(movies)
         }
 
         movieCards += `<div class="movie-card">
+                       <img src="${posterSrc}" alt="${movie.title} poster">
                        <h3>${movie.title}</h3>
                        <p>${year} | Ratings: ${movie.vote_average.toFixed(1)}/10</p>
                        </div>`;
